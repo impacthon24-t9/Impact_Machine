@@ -24,7 +24,7 @@ export const PostImage = async (url, fields, resultImg) => {
   form.append("file", dataURLtoFile(resultImg, "image.png"));
   form.append("Content-Type", "image/png");
 
-  return await axios.put(url, form, {
+  return await axios.post(url, form, {
     headers: {
       "Content-Type": "multipart/form-data"
     }

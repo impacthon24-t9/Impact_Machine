@@ -21,7 +21,7 @@ export const PostImage = async (url, fields, resultImg) => {
   form.append("policy", fields?.policy);
   if (Object.keys(fields).includes("x-amz-signature"))
     form.append("x-amz-signature", fields["x-amz-signature"]);
-  // form.append("Content-Type", "image/png");
+  form.append("Content-Type", "image/png");
   form.append("file", dataURLtoFile(resultImg, "image.png"));
 
   return await axios.post(url, form, {

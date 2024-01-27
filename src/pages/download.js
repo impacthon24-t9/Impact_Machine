@@ -38,7 +38,7 @@ export const Download = () => {
       refetch();
       setUrl(() => data?.url);
       setKey(() => data?.fields.key);
-      setImg(() => `https://w0nd3rwa11.s3.ap-northeast-2.amazonaws.com/${key}`);
+      setImg(() => `${url}${key}`);
     }
   }, [data]);
 

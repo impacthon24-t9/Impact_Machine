@@ -3,7 +3,7 @@ import { AuthInstance } from ".";
 import { dataURLtoFile } from "../util/dataURLtoFile";
 
 export const Gets3 = async () => {
-  const { data } = await AuthInstance.get(`/s3_presigned_url`);
+  const { data } = await AuthInstance.get(`/inbox/s3_presigned_url`);
 
   return data;
 };
@@ -34,8 +34,8 @@ export const PostImage = async (url, fields, resultImg) => {
 export const PostInbox = async ({ phone, image }) => {
   const data = {
     phone,
-    image_url: image,
-    location_name: "임팩톤 특별점"
+    picture: image,
+    location: "임팩톤 특별점"
   };
   return await AuthInstance.post("/inbox", data);
 };

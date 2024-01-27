@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Photo = () => {
   const videoRef = useRef(null);
-  const [time, setTime] = useState(10);
+  const [time, setTime] = useState(7);
   const [photoList, setPhotoList] = useRecoilState(photos);
   const [photoBlobList, setPhotoBlobList] = useRecoilState(photoBlobs);
   const nav = useNavigate();
@@ -29,7 +29,7 @@ export const Photo = () => {
     if (seconds === 0) {
       ScreenShot();
 
-      setTime(5);
+      setTime(3);
     }
     return String(seconds);
   };

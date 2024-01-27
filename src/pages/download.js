@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import TX from "../style/Typography";
 
+
 export const Download = () => {
   const nav = useNavigate();
 

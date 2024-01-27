@@ -19,7 +19,7 @@ const ThemeProvider = ({ children }) => {
   useLayoutEffect(() => {
     setThemeMode(isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
-  const themeObject = ThemeMode === "light" ? darkTheme : lightTheme;
+  const themeObject = ThemeMode === "light" ? lightTheme : darkTheme;
 
   return (
     <ThemeContext.Provider value={{ ThemeMode, setThemeMode }}>
